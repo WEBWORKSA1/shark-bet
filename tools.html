@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Betting Calculators — Parlay, Hedge, Arbitrage, EV & Kelly | Shark.Bet</title>
+<meta name="description" content="Nine free sports betting calculators: odds converter, parlay, hedge, arbitrage, expected value, Kelly criterion, no-vig fair odds, round robin and bankroll unit sizer.">
+<link rel="canonical" href="https://shark.bet/tools.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#050d1a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shark.Bet">
+<meta property="og:title" content="Free Betting Calculators — Parlay, Hedge, Arbitrage, EV & Kelly | Shark.Bet">
+<meta property="og:description" content="Nine free sports betting calculators: odds converter, parlay, hedge, arbitrage, expected value, Kelly criterion, no-vig fair odds, round robin and bankroll unit sizer.">
+<meta property="og:url" content="https://shark.bet/tools.html">
+<meta property="og:image" content="https://shark.bet/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=20260920">
+<script>document.documentElement.className+=' js';try{var t=localStorage.getItem('sb-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://shark.bet/#org","name":"Shark.Bet","url":"https://shark.bet/","logo":"https://shark.bet/assets/img/favicon.svg"},{"@type":"WebSite","@id":"https://shark.bet/#site","name":"Shark.Bet","url":"https://shark.bet/","publisher":{"@id":"https://shark.bet/#org"}},{"@type":"WebPage","name":"Free Betting Calculators \u2014 Parlay, Hedge, Arbitrage, EV & Kelly | Shark.Bet","url":"https://shark.bet/tools.html","description":"Nine free sports betting calculators: odds converter, parlay, hedge, arbitrage, expected value, Kelly criterion, no-vig fair odds, round robin and bankroll unit sizer."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert American odds to decimal?","acceptedAnswer":{"@type":"Answer","text":"For positive odds, divide by 100 and add 1 (+150 = 2.50). For negative odds, divide 100 by the absolute value and add 1 (-110 = 1.909)."}},{"@type":"Question","name":"What is a hedge bet?","acceptedAnswer":{"@type":"Answer","text":"A hedge is a bet on the opposite outcome of an existing wager, sized to lock in profit or reduce risk regardless of the result."}},{"@type":"Question","name":"What is the Kelly criterion?","acceptedAnswer":{"@type":"Answer","text":"Kelly is a staking formula: f = (bp - q) / b, where b is decimal odds minus 1, p is your win probability and q is 1 - p. Most sharps bet a fraction (1/4 to 1/2) of full Kelly."}},{"@type":"Question","name":"What is no-vig fair odds?","acceptedAnswer":{"@type":"Answer","text":"No-vig odds strip the bookmaker's margin from a market by normalising the implied probabilities so they sum to 100%."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="domain-bar" role="note"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name</a></div>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Shark.Bet home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#18d6c3"/><stop offset="1" stop-color="#0a6f86"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 28c6-1 10-4 13-17 3 8 7 13 15 17-9-2-19-2-28 0z" fill="#fff"/><path d="M4 31c5 2 9 2 12 0s7-2 10 0 7 2 10 0" stroke="#ff6a3d" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span>Shark<b>.Bet</b></span></a>
+    <ul class="menu"><li><a href="tools.html" aria-current="page">Shark Tools</a></li><li><a href="odds.html">Odds Lab</a></li><li><a href="learn.html">Academy</a></li><li><a href="videos.html">Videos</a></li><li><a href="contests.html">Contests</a></li><li><a href="offers.html">Offers</a></li><li><a href="support.html">Support</a></li><li><a href="partners.html">Partners</a></li><li class="mobile-only"><a href="join.html">Join Free</a></li></ul>
+    <div class="nav-cta">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">◐</button>
+      <a class="btn btn-primary btn-sm btn-join" href="join.html">Join Free</a>
+      <button class="icon-btn burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+</header>
+<main id="main">
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="index.html">Home</a> / Shark Tools</div>
+  <h1>Shark Tools</h1>
+  <p>Nine free calculators sharp bettors use every day. Type American (−110, +150), decimal (2.50) or fractional (5/2) odds. Results update as you type.</p>
+</div></div>
+
+<section style="padding-top:20px">
+<div class="container">
+  <nav class="tool-nav chips" aria-label="Calculators">
+    <a class="chip" href="#converter">Converter</a><a class="chip" href="#parlay">Parlay</a><a class="chip" href="#hedge">Hedge</a>
+    <a class="chip" href="#arb">Arbitrage</a><a class="chip" href="#ev">EV</a><a class="chip" href="#kelly">Kelly</a>
+    <a class="chip" href="#novig">No-Vig</a><a class="chip" href="#rr">Round Robin</a><a class="chip" href="#units">Bankroll</a>
+  </nav>
+
+  <div class="grid g2">
+    <div class="card calc" id="converter">
+      <h2 style="font-size:1.35rem">🔁 Odds Converter & Implied Probability</h2>
+      <div class="field"><label>Odds</label><input name="odds" value="+150"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">Implied probability is the break-even win rate the price assumes. If your estimate beats it, the bet has value.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="parlay">
+      <h2 style="font-size:1.35rem">🔗 Parlay Calculator</h2>
+      <div class="field"><label>Stake ($)</label><input name="stake" type="number" min="0" value="10"></div>
+      <label>Legs (odds)</label><div class="legs"></div>
+      <button type="button" class="btn btn-ghost btn-sm" id="add-leg">+ Add leg</button>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">The book's margin compounds on every leg you add, so more legs means a bigger hold against you. Sharks keep parlays small and correlated.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="hedge">
+      <h2 style="font-size:1.35rem">🛡️ Hedge Calculator</h2>
+      <div class="row2"><div class="field"><label>Original stake ($)</label><input name="stake" type="number" value="100"></div>
+      <div class="field"><label>Original odds</label><input name="o1" value="+400"></div></div>
+      <div class="field"><label>Hedge odds (other side, now)</label><input name="o2" value="-150"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">This sizes the hedge so you profit equally whichever side wins. Hedging costs EV, so use it to manage risk, not as a habit.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="arb">
+      <h2 style="font-size:1.35rem">⚖️ Arbitrage Calculator</h2>
+      <div class="row2"><div class="field"><label>Side A odds (Book 1)</label><input name="a" value="+110"></div>
+      <div class="field"><label>Side B odds (Book 2)</label><input name="b" value="+105"></div></div>
+      <div class="field"><label>Total stake ($)</label><input name="total" type="number" value="1000"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">If the combined implied probability is under 100%, you can lock a profit. Books limit arbers quickly, so act fast and vary your stakes.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="ev">
+      <h2 style="font-size:1.35rem">📊 Expected Value (EV) Calculator</h2>
+      <div class="row2"><div class="field"><label>Odds</label><input name="odds" value="+120"></div>
+      <div class="field"><label>Your win probability (%)</label><input name="prob" type="number" value="50" min="0" max="100" step="0.1"></div></div>
+      <div class="field"><label>Stake ($)</label><input name="stake" type="number" value="100"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">EV is your average profit per bet over the long run. Positive EV is the only thing that makes a bet worth placing.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="kelly">
+      <h2 style="font-size:1.35rem">🎯 Kelly Criterion Calculator</h2>
+      <div class="row2"><div class="field"><label>Odds</label><input name="odds" value="+110"></div>
+      <div class="field"><label>Win probability (%)</label><input name="prob" type="number" value="52" step="0.1"></div></div>
+      <div class="row2"><div class="field"><label>Bankroll ($)</label><input name="bank" type="number" value="5000"></div>
+      <div class="field"><label>Kelly fraction</label><select name="frac"><option value="1">Full Kelly</option><option value="0.5">Half Kelly</option><option value="0.25" selected>Quarter Kelly</option></select></div></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">Full Kelly maximises long-run growth but swings hard. Quarter Kelly keeps most of the growth with far less variance.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="novig">
+      <h2 style="font-size:1.35rem">✂️ No-Vig Fair Odds Calculator</h2>
+      <div class="row2"><div class="field"><label>Side A odds</label><input name="a" value="-110"></div>
+      <div class="field"><label>Side B odds</label><input name="b" value="-110"></div></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">Remove the margin from a sharp book's line to get the market's true probability, then look for softer books offering better than that price.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="rr">
+      <h2 style="font-size:1.35rem">🔄 Round Robin Calculator</h2>
+      <div class="field"><label>Picks (odds, comma separated)</label><input name="picks" value="-110, +120, -105, +140"></div>
+      <div class="row2"><div class="field"><label>Parlay size</label><select name="size"><option value="2" selected>By 2s</option><option value="3">By 3s</option><option value="4">By 4s</option><option value="5">By 5s</option></select></div>
+      <div class="field"><label>Stake per parlay ($)</label><input name="stake" type="number" value="10"></div></div>
+      <div class="out" aria-live="polite"></div>
+      <button class="btn btn-ghost btn-sm" data-copy style="margin-top:12px">Copy result</button>
+    </div>
+
+    <div class="card calc" id="units">
+      <h2 style="font-size:1.35rem">💰 Bankroll & Unit Sizer</h2>
+      <div class="row2"><div class="field"><label>Bankroll ($)</label><input name="bank" type="number" value="2000"></div>
+      <div class="field"><label>Unit size (% of bankroll)</label><input name="unit" type="number" value="1.5" step="0.1"></div></div>
+      <div class="field"><label>Typical bet</label><select name="style"><option value="0.5">0.5 unit</option><option value="1" selected>1 unit</option><option value="2">2 units</option><option value="3">3 units</option></select></div>
+      <div class="out" aria-live="polite"></div>
+      <button class="btn btn-ghost btn-sm" data-copy style="margin-top:12px">Copy result</button>
+    </div>
+
+    <div class="card" style="background:linear-gradient(160deg,#0b3a52,#0f1f36)">
+      <span class="badge orange">Free</span>
+      <h2 style="font-size:1.35rem;margin-top:10px">Get all 9 tools in your inbox, plus a weekly +EV walkthrough</h2>
+      <p class="muted small">The Shark Report shows you how to use these calculators on real lines every week.</p>
+      <form data-form="Tools page lead" data-success="Subscribed! Your first Shark Report arrives this week.">
+        <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><input type="email" name="email" required placeholder="you@email.com" aria-label="Email"></div>
+        <label class="check"><input type="checkbox" name="age_21" value="yes" required> I'm 21+ and want the Shark Report</label>
+        <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Subscribe free</button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+
+<section class="alt">
+  <div class="container prose" style="margin:0 auto">
+    <h2>Betting calculator FAQ</h2>
+    <details><summary>How do I convert American odds to decimal?</summary><p>For positive odds, divide by 100 and add 1 (+150 = 2.50). For negative odds, divide 100 by the absolute value and add 1 (−110 = 1.909).</p></details>
+    <details><summary>What is a hedge bet?</summary><p>A hedge is a bet on the opposite outcome of an existing wager, sized to lock in profit or reduce risk whatever the result.</p></details>
+    <details><summary>What is the Kelly criterion?</summary><p>A staking formula: f = (bp − q) / b, where b is decimal odds minus 1, p is your win probability and q = 1 − p. Most sharps bet ¼ to ½ Kelly.</p></details>
+    <details><summary>What are no-vig fair odds?</summary><p>No-vig odds strip the bookmaker's margin out of a market by normalising the implied probabilities so they sum to 100%.</p></details>
+    <details><summary>Why is my parlay payout lower than I expected?</summary><p>Each leg carries the book's margin, and the margins multiply. A 4-leg parlay at −110 per leg carries roughly 17% hold versus about 4.5% on a single bet.</p></details>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#18d6c3"/><stop offset="1" stop-color="#0a6f86"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 28c6-1 10-4 13-17 3 8 7 13 15 17-9-2-19-2-28 0z" fill="#fff"/><path d="M4 31c5 2 9 2 12 0s7-2 10 0 7 2 10 0" stroke="#ff6a3d" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span>Shark<b>.Bet</b></span></a>
+        <p class="muted small" style="margin-top:12px">Bet like a shark. Free sharp-betting tools, odds intelligence, education and free-to-play contests. We do not accept wagers.</p>
+        <form class="inline-form" data-form="Footer newsletter" data-success="You're subscribed to the Shark Report.">
+          <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="email" name="email" required placeholder="Your email" aria-label="Email for newsletter">
+          <button class="btn btn-teal" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div><h4>Tools</h4><ul>
+        <li><a href="tools.html#converter">Odds Converter</a></li><li><a href="tools.html#parlay">Parlay Calculator</a></li>
+        <li><a href="tools.html#hedge">Hedge Calculator</a></li><li><a href="tools.html#arb">Arbitrage Calculator</a></li>
+        <li><a href="tools.html#kelly">Kelly Criterion</a></li><li><a href="odds.html">Odds Lab</a></li></ul></div>
+      <div><h4>Learn</h4><ul>
+        <li><a href="learn.html">Shark Academy</a></li><li><a href="learn.html#glossary">Glossary</a></li>
+        <li><a href="videos.html">Video Hub</a></li><li><a href="join.html#quiz">Bettor Quiz</a></li>
+        <li><a href="responsible-gambling.html">Responsible Gambling</a></li></ul></div>
+      <div><h4>Community</h4><ul>
+        <li><a href="contests.html">Free Contests</a></li><li><a href="join.html">Shark Report</a></li>
+        <li><a href="support.html">Support Us</a></li><li><a href="partners.html#careers">Careers</a></li>
+        <li><a href="partners.html">Advertise</a></li></ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li>
+        <li><a href="https://web.works/contact" target="_blank" rel="noopener">Buy this domain</a></li></ul></div>
+    </div>
+    <div class="rg-note"><b>21+ only (18+/19+ where applicable).</b> Shark.Bet is an independent information and entertainment site. We do not accept wagers. Odds shown are for information and may change. Gambling involves risk; bet only what you can afford to lose. If you or someone you know has a gambling problem, call or text <b>1-800-GAMBLER</b> (US) or visit <a href="responsible-gambling.html">our Responsible Gambling page</a>. Some links may be affiliate links; we may earn a commission at no cost to you.</div>
+    <div class="copyright"><span>© <span data-year></span> Shark.Bet · All rights reserved.</span><span><a href="https://web.works/contact" target="_blank" rel="noopener">Interested in this website/domain? Contact us</a></span></div>
+  </div>
+</footer>
+
+<div class="modal" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
+  <div class="box center">
+    <div style="width:64px;margin:0 auto 10px"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#18d6c3"/><stop offset="1" stop-color="#0a6f86"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M6 28c6-1 10-4 13-17 3 8 7 13 15 17-9-2-19-2-28 0z" fill="#fff"/><path d="M4 31c5 2 9 2 12 0s7-2 10 0 7 2 10 0" stroke="#ff6a3d" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+    <h2 id="age-title" style="font-size:1.6rem">Are you of legal age?</h2>
+    <p class="muted">Shark.Bet contains sports-betting information intended for adults 21+ (18+/19+ where legal). By entering you confirm you meet the legal age in your location.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-teal btn-lg" id="age-yes">Yes, I'm 21+</button>
+      <button class="btn btn-ghost btn-lg" id="age-no">No</button>
+    </div>
+    <p class="small muted" style="margin-top:14px">Gambling problem? Call 1-800-GAMBLER.</p>
+  </div>
+</div>
+
+<div class="modal" id="exit-modal" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div class="box">
+    <button class="close" aria-label="Close">×</button>
+    <span class="badge orange">Before you go</span>
+    <h2 id="exit-title" style="font-size:1.6rem;margin-top:10px">Grab the free Shark Starter Kit</h2>
+    <ul class="checklist small"><li>Line-shopping checklist (save 2–4% per bet)</li><li>Bankroll & unit-sizing sheet</li><li>Weekly Shark Report: sharp signals & best prices</li></ul>
+    <form data-form="Exit-intent lead" data-success="Check your inbox — your Starter Kit is on the way.">
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field"><input type="email" name="email" required placeholder="you@email.com" aria-label="Email"></div>
+      <label class="check"><input type="checkbox" name="age_21" value="yes" required> I'm 21+ and agree to receive emails</label>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Send my free kit</button>
+    </form>
+  </div>
+</div>
+
+<div class="cookie" id="cookie" role="region" aria-label="Cookie consent">
+  <span>We use cookies for analytics and ads (Google AdSense). <a href="privacy.html">Privacy</a></span>
+  <span style="display:flex;gap:8px;flex:none"><button class="btn btn-ghost btn-sm" data-cookie="essential">Essential only</button><button class="btn btn-teal btn-sm" data-cookie="all">Accept all</button></span>
+</div>
+
+<script src="assets/js/config.js?v=20260920"></script>
+<script src="assets/js/data.js?v=20260920"></script>
+<script src="assets/js/main.js?v=20260920"></script>
+<script src="assets/js/tools.js?v=20260920"></script>
+<script src="assets/js/pages.js?v=20260920"></script>
+</body>
+</html>
