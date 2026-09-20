@@ -1,0 +1,129 @@
+<!--{"title": "Free Betting Calculators — Parlay, Hedge, Arbitrage, EV & Kelly | Shark.Bet", "desc": "Nine free sports betting calculators: odds converter, parlay, hedge, arbitrage, expected value, Kelly criterion, no-vig fair odds, round robin and bankroll unit sizer.", "priority": "0.9", "faq": [["How do I convert American odds to decimal?", "For positive odds, divide by 100 and add 1 (+150 = 2.50). For negative odds, divide 100 by the absolute value and add 1 (-110 = 1.909)."], ["What is a hedge bet?", "A hedge is a bet on the opposite outcome of an existing wager, sized to lock in profit or reduce risk regardless of the result."], ["What is the Kelly criterion?", "Kelly is a staking formula: f = (bp - q) / b, where b is decimal odds minus 1, p is your win probability and q is 1 - p. Most sharps bet a fraction (1/4 to 1/2) of full Kelly."], ["What is no-vig fair odds?", "No-vig odds strip the bookmaker's margin from a market by normalising the implied probabilities so they sum to 100%."]]}-->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="index.html">Home</a> / Shark Tools</div>
+  <h1>Shark Tools</h1>
+  <p>Nine free calculators sharp bettors use every day. Type American (−110, +150), decimal (2.50) or fractional (5/2) odds. Results update as you type.</p>
+</div></div>
+
+<section style="padding-top:20px">
+<div class="container">
+  <nav class="tool-nav chips" aria-label="Calculators">
+    <a class="chip" href="#converter">Converter</a><a class="chip" href="#parlay">Parlay</a><a class="chip" href="#hedge">Hedge</a>
+    <a class="chip" href="#arb">Arbitrage</a><a class="chip" href="#ev">EV</a><a class="chip" href="#kelly">Kelly</a>
+    <a class="chip" href="#novig">No-Vig</a><a class="chip" href="#rr">Round Robin</a><a class="chip" href="#units">Bankroll</a>
+  </nav>
+
+  <div class="grid g2">
+    <div class="card calc" id="converter">
+      <h2 style="font-size:1.35rem">🔁 Odds Converter & Implied Probability</h2>
+      <div class="field"><label>Odds</label><input name="odds" value="+150"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">Implied probability is the break-even win rate the price assumes. If your estimate beats it, the bet has value.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="parlay">
+      <h2 style="font-size:1.35rem">🔗 Parlay Calculator</h2>
+      <div class="field"><label>Stake ($)</label><input name="stake" type="number" min="0" value="10"></div>
+      <label>Legs (odds)</label><div class="legs"></div>
+      <button type="button" class="btn btn-ghost btn-sm" id="add-leg">+ Add leg</button>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">The book's margin compounds on every leg you add, so more legs means a bigger hold against you. Sharks keep parlays small and correlated.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="hedge">
+      <h2 style="font-size:1.35rem">🛡️ Hedge Calculator</h2>
+      <div class="row2"><div class="field"><label>Original stake ($)</label><input name="stake" type="number" value="100"></div>
+      <div class="field"><label>Original odds</label><input name="o1" value="+400"></div></div>
+      <div class="field"><label>Hedge odds (other side, now)</label><input name="o2" value="-150"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">This sizes the hedge so you profit equally whichever side wins. Hedging costs EV, so use it to manage risk, not as a habit.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="arb">
+      <h2 style="font-size:1.35rem">⚖️ Arbitrage Calculator</h2>
+      <div class="row2"><div class="field"><label>Side A odds (Book 1)</label><input name="a" value="+110"></div>
+      <div class="field"><label>Side B odds (Book 2)</label><input name="b" value="+105"></div></div>
+      <div class="field"><label>Total stake ($)</label><input name="total" type="number" value="1000"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">If the combined implied probability is under 100%, you can lock a profit. Books limit arbers quickly, so act fast and vary your stakes.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="ev">
+      <h2 style="font-size:1.35rem">📊 Expected Value (EV) Calculator</h2>
+      <div class="row2"><div class="field"><label>Odds</label><input name="odds" value="+120"></div>
+      <div class="field"><label>Your win probability (%)</label><input name="prob" type="number" value="50" min="0" max="100" step="0.1"></div></div>
+      <div class="field"><label>Stake ($)</label><input name="stake" type="number" value="100"></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">EV is your average profit per bet over the long run. Positive EV is the only thing that makes a bet worth placing.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="kelly">
+      <h2 style="font-size:1.35rem">🎯 Kelly Criterion Calculator</h2>
+      <div class="row2"><div class="field"><label>Odds</label><input name="odds" value="+110"></div>
+      <div class="field"><label>Win probability (%)</label><input name="prob" type="number" value="52" step="0.1"></div></div>
+      <div class="row2"><div class="field"><label>Bankroll ($)</label><input name="bank" type="number" value="5000"></div>
+      <div class="field"><label>Kelly fraction</label><select name="frac"><option value="1">Full Kelly</option><option value="0.5">Half Kelly</option><option value="0.25" selected>Quarter Kelly</option></select></div></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">Full Kelly maximises long-run growth but swings hard. Quarter Kelly keeps most of the growth with far less variance.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="novig">
+      <h2 style="font-size:1.35rem">✂️ No-Vig Fair Odds Calculator</h2>
+      <div class="row2"><div class="field"><label>Side A odds</label><input name="a" value="-110"></div>
+      <div class="field"><label>Side B odds</label><input name="b" value="-110"></div></div>
+      <div class="out" aria-live="polite"></div>
+      <p class="small muted" style="margin-top:12px">Remove the margin from a sharp book's line to get the market's true probability, then look for softer books offering better than that price.</p>
+      <button class="btn btn-ghost btn-sm" data-copy>Copy result</button>
+    </div>
+
+    <div class="card calc" id="rr">
+      <h2 style="font-size:1.35rem">🔄 Round Robin Calculator</h2>
+      <div class="field"><label>Picks (odds, comma separated)</label><input name="picks" value="-110, +120, -105, +140"></div>
+      <div class="row2"><div class="field"><label>Parlay size</label><select name="size"><option value="2" selected>By 2s</option><option value="3">By 3s</option><option value="4">By 4s</option><option value="5">By 5s</option></select></div>
+      <div class="field"><label>Stake per parlay ($)</label><input name="stake" type="number" value="10"></div></div>
+      <div class="out" aria-live="polite"></div>
+      <button class="btn btn-ghost btn-sm" data-copy style="margin-top:12px">Copy result</button>
+    </div>
+
+    <div class="card calc" id="units">
+      <h2 style="font-size:1.35rem">💰 Bankroll & Unit Sizer</h2>
+      <div class="row2"><div class="field"><label>Bankroll ($)</label><input name="bank" type="number" value="2000"></div>
+      <div class="field"><label>Unit size (% of bankroll)</label><input name="unit" type="number" value="1.5" step="0.1"></div></div>
+      <div class="field"><label>Typical bet</label><select name="style"><option value="0.5">0.5 unit</option><option value="1" selected>1 unit</option><option value="2">2 units</option><option value="3">3 units</option></select></div>
+      <div class="out" aria-live="polite"></div>
+      <button class="btn btn-ghost btn-sm" data-copy style="margin-top:12px">Copy result</button>
+    </div>
+
+    <div class="card" style="background:linear-gradient(160deg,#0b3a52,#0f1f36)">
+      <span class="badge orange">Free</span>
+      <h2 style="font-size:1.35rem;margin-top:10px">Get all 9 tools in your inbox, plus a weekly +EV walkthrough</h2>
+      <p class="muted small">The Shark Report shows you how to use these calculators on real lines every week.</p>
+      <form data-form="Tools page lead" data-success="Subscribed! Your first Shark Report arrives this week.">
+        <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><input type="email" name="email" required placeholder="you@email.com" aria-label="Email"></div>
+        <label class="check"><input type="checkbox" name="age_21" value="yes" required> I'm 21+ and want the Shark Report</label>
+        <button class="btn btn-primary btn-block" type="submit" style="margin-top:12px">Subscribe free</button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+
+<section class="alt">
+  <div class="container prose" style="margin:0 auto">
+    <h2>Betting calculator FAQ</h2>
+    <details><summary>How do I convert American odds to decimal?</summary><p>For positive odds, divide by 100 and add 1 (+150 = 2.50). For negative odds, divide 100 by the absolute value and add 1 (−110 = 1.909).</p></details>
+    <details><summary>What is a hedge bet?</summary><p>A hedge is a bet on the opposite outcome of an existing wager, sized to lock in profit or reduce risk whatever the result.</p></details>
+    <details><summary>What is the Kelly criterion?</summary><p>A staking formula: f = (bp − q) / b, where b is decimal odds minus 1, p is your win probability and q = 1 − p. Most sharps bet ¼ to ½ Kelly.</p></details>
+    <details><summary>What are no-vig fair odds?</summary><p>No-vig odds strip the bookmaker's margin out of a market by normalising the implied probabilities so they sum to 100%.</p></details>
+    <details><summary>Why is my parlay payout lower than I expected?</summary><p>Each leg carries the book's margin, and the margins multiply. A 4-leg parlay at −110 per leg carries roughly 17% hold versus about 4.5% on a single bet.</p></details>
+  </div>
+</section>
