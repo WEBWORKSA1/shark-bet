@@ -1,0 +1,110 @@
+<!--{"title": "Free Betting Contests — Pick'em, Streak Survivor & Leaderboards | Shark.Bet", "desc": "Free-to-play sports prediction contests with prizes: weekly pick'em against the spread, Streak Survivor jackpot, season-long Great White League and private office pools. No purchase necessary.", "priority": "0.9"}-->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="index.html">Home</a> / Contests</div>
+  <h1>Free Contests & Prizes</h1>
+  <p>Test your edge against the Shark.Bet community. Every contest is <b>free to enter, no purchase necessary</b>. Prizes are funded by supporters and sponsors.</p>
+</div></div>
+
+<section style="padding-top:26px" id="pickem">
+<div class="container split" style="align-items:start">
+  <div>
+    <span class="badge gold">Weekly</span>
+    <h2 style="margin-top:10px">Pick'em Showdown</h2>
+    <p class="muted"><b id="contest-week">This week</b>. Pick every game against the spread. Highest score wins the weekly prize pack; ties are broken by total points in the tiebreaker game.</p>
+    <p class="small"><span id="pick-count" class="badge">0 / 6 picks made</span></p>
+    <div id="matchups"></div>
+  </div>
+  <div class="form-card" style="position:sticky;top:90px">
+    <h3>Lock in your entry</h3>
+    <form id="contest-form" data-form="Contest entry — Pick'em" data-success="Entry received! Good luck. Results post on the leaderboard after the week closes.">
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row2">
+        <div class="field"><label for="c-name">Display name</label><input id="c-name" name="display_name" required maxlength="24"></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" required></div>
+      </div>
+      <div class="field"><label for="c-tb">Tiebreaker: total points in Buffalo @ Miami</label><input id="c-tb" type="number" name="tiebreaker" min="0" max="150" required></div>
+      <div class="field"><label for="c-region">Country / State</label><input id="c-region" name="region" required></div>
+      <label class="check"><input type="checkbox" name="age_21" value="yes" required> I'm 21+ (or legal age) and agree to the <a href="#rules">official rules</a>.</label>
+      <label class="check" style="margin-top:8px"><input type="checkbox" name="newsletter" value="yes" checked> Send me the weekly Shark Report</label>
+      <button class="btn btn-primary btn-block btn-lg" type="submit" style="margin-top:14px">Submit my picks 🦈</button>
+    </form>
+    <p class="small muted" style="margin-top:12px">🏆 Weekly prize pack: $100 gift card + Shark.Bet merch + a "Shark of the Week" feature.</p>
+  </div>
+</div>
+</section>
+<script>document.addEventListener("DOMContentLoaded",function(){var w=document.getElementById("contest-week");if(w&&window.SB_DATA)w.textContent=SB_DATA.contest.week+" · "+SB_DATA.contest.deadline});</script>
+
+<div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+
+<section class="alt">
+<div class="container grid g2">
+  <div class="card" id="survivor">
+    <span class="badge orange">Jackpot</span>
+    <h2 style="margin-top:10px;font-size:1.6rem">Streak Survivor</h2>
+    <p class="muted">Make one pick a day, from any sport. Hit <b>15 in a row</b> to win the jackpot. A loss resets you to zero, and you can start a new streak anytime.</p>
+    <ul class="checklist small"><li>Jackpot grows with every sponsor who joins</li><li>Monthly longest-streak prize</li><li>Pushes don't break your streak</li></ul>
+    <form data-form="Streak Survivor sign-up" data-success="You're registered! Your first daily pick prompt arrives tomorrow.">
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="inline-form"><input type="email" name="email" required placeholder="you@email.com" aria-label="Email"><button class="btn btn-teal" type="submit">Start my streak</button></div>
+      <label class="check" style="margin-top:10px"><input type="checkbox" name="age_21" value="yes" required> I'm 21+ and accept the rules</label>
+    </form>
+  </div>
+  <div class="card" id="league">
+    <span class="badge green">Season</span>
+    <h2 style="margin-top:10px;font-size:1.6rem">Great White League</h2>
+    <p class="muted">A season-long leaderboard across NFL, NBA and MLB, ranked on units won, so price matters. The top 3 win prizes and a featured-analyst spot on Shark.Bet.</p>
+    <div class="table-wrap" id="leaderboard"></div>
+    <p class="small muted" style="margin-top:8px">Preseason demo standings.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container split">
+  <div>
+    <span class="kicker">Office pools</span>
+    <h2>Run a private pool for your crew</h2>
+    <p class="muted">Free private pick'em for your office, league or group chat, with a custom leaderboard, invite link and weekly recap emails. We set it up for you.</p>
+    <ul class="checklist"><li>Free for up to 50 players</li><li>NFL, NBA, college or March brackets</li><li>Sponsor-branded pools available</li></ul>
+  </div>
+  <form class="form-card" data-form="Private pool request" data-success="Request received! We'll send your pool link within 24 hours.">
+    <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <h3>Request a private pool</h3>
+    <div class="row2"><div class="field"><label>Your name</label><input name="name" required></div><div class="field"><label>Email</label><input type="email" name="email" required></div></div>
+    <div class="row2"><div class="field"><label>Pool name</label><input name="pool_name" required></div><div class="field"><label>Expected players</label><select name="players"><option>2–10</option><option>11–25</option><option>26–50</option><option>50+</option></select></div></div>
+    <div class="field"><label>Sport / format</label><div class="chips" data-name="format"><button class="chip">NFL ATS</button><button class="chip">NFL straight-up</button><button class="chip">NBA</button><button class="chip">College</button><button class="chip">Bracket</button></div></div>
+    <button class="btn btn-primary btn-block" type="submit">Create my pool</button>
+  </form>
+</div>
+</section>
+
+<section class="alt">
+<div class="container split">
+  <div>
+    <span class="kicker">Prize sponsors</span>
+    <h2>Put your brand in front of engaged bettors</h2>
+    <p class="muted">Sponsor a weekly prize, the Streak Survivor jackpot or a whole season. Sponsors get logo placement, the contest named after them, a newsletter feature and the list of opted-in entrants.</p>
+    <a class="btn btn-teal" href="partners.html#sponsor">Sponsor a contest →</a>
+  </div>
+  <div class="card" id="winners">
+    <h3>🏅 Winners wall</h3>
+    <p class="muted small">Weekly winners, streak champions and league leaders are posted here with their consent. The first contest week kicks off soon, so be the first name on the wall.</p>
+    <a class="btn btn-primary btn-sm" href="#pickem">Enter this week</a>
+  </div>
+</div>
+</section>
+
+<section id="rules">
+<div class="container prose" style="margin:0 auto">
+  <h2>Official contest rules (summary)</h2>
+  <ul>
+    <li><b>No purchase necessary.</b> A purchase or payment does not improve your chances of winning. Void where prohibited or restricted by law.</li>
+    <li><b>Eligibility:</b> open to individuals who are 21+ (or the age of majority where they live) and live where free sweepstakes/skill contests are permitted. One entry per person per contest.</li>
+    <li><b>Scoring:</b> Pick'em awards 1 point per correct pick against the posted spread; pushes score 0.5. The tiebreaker is the closest total without going over, then the earliest entry.</li>
+    <li><b>Prizes:</b> as listed on each contest. Prizes are non-transferable; winners may need to confirm eligibility and are responsible for applicable taxes.</li>
+    <li><b>Winner notification:</b> by email within 7 days of contest close. Unclaimed prizes after 14 days may be forfeited.</li>
+    <li><b>Conduct:</b> multiple accounts, automation or collusion lead to disqualification.</li>
+    <li>Shark.Bet does not accept wagers. Contests are free-to-play entertainment. See the <a href="terms.html">Terms</a> for full terms.</li>
+  </ul>
+</div>
+</section>
