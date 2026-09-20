@@ -1,0 +1,68 @@
+<!--{"title": "Support Shark.Bet — Donate, Become a Supporter, Fund Contest Prizes", "desc": "Keep Shark.Bet free. Donate once or become a Fin, Hammerhead or Great White supporter to fund operations, promotion, new talent and contest prizes.", "priority": "0.7"}-->
+<div class="page-hero"><div class="container">
+  <div class="crumbs"><a href="index.html">Home</a> / Support</div>
+  <h1>Feed the Shark ♥</h1>
+  <p>Shark.Bet is free for everyone. Your support pays for servers, new tools, promotion, hiring talent and the contest prize pool, and we publish where every dollar goes.</p>
+</div></div>
+
+<section style="padding-top:26px">
+<div class="container split" style="align-items:start">
+  <div class="form-card">
+    <h2 style="font-size:1.5rem">Make a donation</h2>
+    <p class="muted small">Secure checkout via PayPal (card or PayPal balance). Choose an amount:</p>
+    <div class="amounts">
+      <button class="chip" data-amount="10" aria-pressed="false">$10</button><button class="chip on" data-amount="25" aria-pressed="true">$25</button>
+      <button class="chip" data-amount="50" aria-pressed="false">$50</button><button class="chip" data-amount="100" aria-pressed="false">$100</button>
+    </div>
+    <div class="field"><label for="custom-amount">Or a custom amount (USD)</label><input id="custom-amount" type="number" min="1" step="1" placeholder="e.g. 15"></div>
+    <div class="field"><label for="d-purpose">Put it towards</label>
+      <select id="d-purpose" onchange="document.getElementById('donate-btn').setAttribute('data-donate', this.value)">
+        <option>Shark.Bet — where needed most</option><option>Shark.Bet — contest prize pool</option><option>Shark.Bet — new tools & operations</option><option>Shark.Bet — promotion & marketing</option><option>Shark.Bet — hiring creators & analysts</option>
+      </select></div>
+    <button class="btn btn-primary btn-block btn-lg" id="donate-btn" data-donate="Shark.Bet — where needed most">Donate securely →</button>
+    <p class="small muted center" style="margin-top:10px">Opens PayPal in a new tab. Shark.Bet is not a registered charity, so donations are not tax-deductible.</p>
+  </div>
+  <div>
+    <h2 style="font-size:1.5rem">Where your support goes</h2>
+    <div class="alloc" aria-hidden="true"><i style="width:35%;background:var(--teal)"></i><i style="width:25%;background:var(--orange)"></i><i style="width:20%;background:var(--gold)"></i><i style="width:20%;background:var(--blue)"></i></div>
+    <ul class="checklist">
+      <li><b style="color:var(--teal)">35% Operations & tools</b>: hosting, data feeds, new calculators</li>
+      <li><b style="color:var(--orange)">25% Contest prizes</b>: weekly packs and the Streak jackpot</li>
+      <li><b style="color:var(--gold)">20% Talent</b>: paying analysts, writers, video creators</li>
+      <li><b style="color:var(--blue)">20% Promotion</b>: growing the community and the Shark Report</li>
+    </ul>
+    <p class="muted small">Target allocation. We'll publish a quarterly transparency note in the Shark Report.</p>
+  </div>
+</div>
+</section>
+
+<section class="alt">
+<div class="container">
+  <div class="section-head center"><span class="kicker">Monthly supporters</span><h2>Join the pod</h2><p class="muted">Recurring supporters keep the lights on and get perks in return.</p></div>
+  <div class="grid g3">
+    <div class="card tier"><h3>🐟 Fin</h3><div class="price">$5<small>/month</small></div><ul class="checklist small"><li>Supporter badge on leaderboards</li><li>Early access to new tools</li><li>Our eternal gratitude</li></ul><button class="btn btn-ghost btn-block" data-donate="Shark.Bet Fin supporter (monthly)" data-fixed="5">Become a Fin</button></div>
+    <div class="card tier featured"><h3>🦈 Hammerhead</h3><div class="price">$15<small>/month</small></div><ul class="checklist small"><li>Everything in Fin</li><li>Bonus contest entries (still free for all)</li><li>Monthly supporter Q&A</li><li>Name on the supporters wall</li></ul><button class="btn btn-primary btn-block" data-donate="Shark.Bet Hammerhead supporter (monthly)" data-fixed="15">Become a Hammerhead</button></div>
+    <div class="card tier"><h3>🦷 Great White</h3><div class="price">$50<small>/month</small></div><ul class="checklist small"><li>Everything in Hammerhead</li><li>Sponsor-a-prize credit each quarter</li><li>Feature request priority</li><li>Private supporters channel</li></ul><button class="btn btn-ghost btn-block" data-donate="Shark.Bet Great White supporter (monthly)" data-fixed="50">Become a Great White</button></div>
+  </div>
+  <p class="small muted center" style="margin-top:14px">On PayPal, tick "Make this a monthly donation" to make it recurring.</p>
+</div>
+</section>
+
+<section>
+<div class="container split">
+  <div>
+    <span class="kicker">Bigger support</span>
+    <h2>Pledge, sponsor or fund a prize</h2>
+    <p class="muted">Want to fund a whole contest week, a jackpot, a hiring bounty or a marketing push? Tell us what you'd like to support and we'll send a proposal.</p>
+    <ul class="checklist"><li>Fund a contest prize (named after you or your brand)</li><li>Sponsor a new tool or academy track</li><li>Back a creator or analyst hire</li><li>Underwrite a promotion campaign</li></ul>
+  </div>
+  <form class="form-card" data-form="Support pledge / sponsorship" data-success="Thank you! We'll reply with a proposal within 2 business days.">
+    <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="row2"><div class="field"><label>Name</label><input name="name" required></div><div class="field"><label>Email</label><input type="email" name="email" required></div></div>
+    <div class="field"><label>I'd like to support</label><div class="chips" data-name="support_area" data-multi><button class="chip">Operations</button><button class="chip">Promotions & marketing</button><button class="chip">Hiring talent</button><button class="chip">Contests & prizes</button></div></div>
+    <div class="field"><label>Pledge range</label><select name="pledge"><option>Under $250</option><option>$250 – $1,000</option><option>$1,000 – $5,000</option><option>$5,000+</option></select></div>
+    <div class="field"><label>Message</label><textarea name="message"></textarea></div>
+    <button class="btn btn-primary btn-block" type="submit">Send pledge</button>
+  </form>
+</div>
+</section>
